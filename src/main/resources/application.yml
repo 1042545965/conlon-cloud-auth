@@ -1,0 +1,31 @@
+server:
+  port: 9300
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/conlon_cloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+#  mapper-locations: classpath:mapper/*.xml
+# mybatis-plus 配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: conlon.cloud.auth.entity
+  global-config:
+    db-config:
+      id-type: auto
+# Logger Config
+# (这里需要在 logback-auth.xml 使用 yml 的参数 所以不能叫做 logback.xml 应为会在 yml之前加载)
+logging:
+  config: classpath:logback-auth.xml
+  level:
+    conlon.cloud.auth.dao: debug
+
+# 定义日志级别  debug , info
+logback:
+#  使用 pom当中的参数
+  name: @build.finalName@
+  path: /home/cloud/@build.finalName@/
+  level: info
