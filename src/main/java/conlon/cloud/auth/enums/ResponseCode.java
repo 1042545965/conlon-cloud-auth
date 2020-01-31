@@ -13,13 +13,12 @@ public enum ResponseCode {
     /**
      * 请求成功
      */
-    success("000000", "操作成功")
+
+    SUCCESS("000000", "操作成功")
     /**
      * 请求失败
      */
-    , fail("999999", "网络繁忙，请稍后再试!")
-
-
+    , FAIL("999999", "网络繁忙，请稍后再试!")
     ;
 
     private String resultCode;

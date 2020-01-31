@@ -1,16 +1,14 @@
 package conlon.cloud.auth.controller;
 
 
-import conlon.cloud.auth.dao.SysUserDao;
 import conlon.cloud.auth.entity.SysUser;
 import conlon.cloud.auth.enums.ConstantEnum;
 import conlon.cloud.auth.service.SysUserService;
 import conlon.cloud.auth.utils.JWTUtil;
-import conlon.cloud.common.utils.Result;
-import conlon.cloud.common.utils.md5.MD5Utils;
+import conlon.cloud.auth.utils.Result;
+import conlon.cloud.auth.utils.md5.MD5Utils;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
-import javax.annotation.Resource;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
@@ -54,9 +52,9 @@ public class AuthController {
             @RequestParam("password") String password) {
         String realPassword = sysUserService.getPassword(username);
         if (realPassword == null) {
-            return Result.build("401" , "用户名错误");
+            return Result.build("401", "用户名错误");
         } else if (!realPassword.equals(MD5Utils.MD5(password))) {
-            return Result.build("401" , "密码错误");
+            return Result.build("401", "密码错误");
         } else {
             return Result.ok(JWTUtil.createToken(username));
         }
@@ -65,7 +63,7 @@ public class AuthController {
 
     @RequestMapping(path = "/unauthorized/{message}")
     public Result unauthorized(@PathVariable String message) throws UnsupportedEncodingException {
-        return Result.build("401" , message);
+        return Result.build("401", message);
     }
 
 

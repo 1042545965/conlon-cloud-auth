@@ -1,7 +1,6 @@
 package conlon.cloud.auth.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import conlon.cloud.common.entity.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import lombok.Data;
