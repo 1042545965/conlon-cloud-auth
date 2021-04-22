@@ -21,7 +21,7 @@
         <springfox.swagger.version>2.9.2</springfox.swagger.version>
         <mybatis.typehandlers.version>1.0.2</mybatis.typehandlers.version>
         <jwt.version>3.4.0</jwt.version>
-        <shiro.version>1.4.0</shiro.version>
+        <shiro.version>1.7.0</shiro.version>
     </properties>
 
     <dependencies>
