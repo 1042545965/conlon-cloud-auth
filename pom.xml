@@ -16,7 +16,7 @@
         <java.version>1.8</java.version>
         <mybatis.plus.version>3.3.1.tmp</mybatis.plus.version><!--3.2.0-->
         <alibaba.druid.version>1.1.13</alibaba.druid.version>
-        <fastjson.version>1.2.62</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <pagehelper.boot.version>1.2.12</pagehelper.boot.version>
         <springfox.swagger.version>2.9.2</springfox.swagger.version>
         <mybatis.typehandlers.version>1.0.2</mybatis.typehandlers.version>
